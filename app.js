@@ -1,31 +1,31 @@
 const app = Vue.createApp({
     data() {
         return {
-            counter: 0,
-            num: 5,
-            name: "",
-            // the confirmed name should only be updated when we click enter
-            confirmedName: ""
-        };
-    },
-    methods: {
-        confirmInput() {
-            this.confirmedName = this.name;
-        },
-        submitForm() {
-
-            alert("submitted")
-        },
-        setName(event, lastName) {
-            this.name = event.target.value + '' + lastName;
-        },
-        add(num) {
-            this.counter = this.counter + this.num;
-        },
-        remove(num) {
-            this.counter = this.counter - this.num;
+            test: "",
+            userInput: "",
+            confirmedInput: ""
         }
-    }
-});
+    },
 
-app.mount('#events');
+    methods: {
+        showAlert() {
+            alert("i am here now")
+        },
+        saveInput(event) {
+            this.userInput = event.target.value;
+        },
+        confirmInput() {
+            this.confirmedInput = this.userInput;
+        }
+
+
+
+    }
+
+
+
+
+
+})
+
+app.mount("#assignment")
